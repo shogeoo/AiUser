@@ -1,3 +1,4 @@
 telethon
 openai
+httpx
 python-dotenv
