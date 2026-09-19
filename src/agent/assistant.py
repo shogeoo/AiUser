@@ -9,8 +9,9 @@ from typing import Any, Dict, List, Tuple
 from openai import AsyncOpenAI
 from telethon import TelegramClient, errors
 
-from src.buffer import EventBuffer
-from src.config import (
+from src.agent.buffer import EventBuffer
+from src.agent.context import ContextManager
+from src.core.config import (
     MODEL_NAME,
     OPENROUTER_API_KEY,
     OPENROUTER_BASE_URL,
@@ -20,12 +21,11 @@ from src.config import (
     TG_API_HASH,
     TG_API_ID,
 )
-from src.context import ContextManager
-from src.events import serialize_event
-from src.executor import ActionExecutor
-from src.logger import get_logger
-from src.model_info import get_input_modalities
-from src.schema import AGENT_RESPONSE_SCHEMA
+from src.core.logger import get_logger
+from src.llm.model_info import get_input_modalities
+from src.llm.schema import AGENT_RESPONSE_SCHEMA
+from src.telegram.events import serialize_event
+from src.telegram.executor import ActionExecutor
 
 logger = get_logger("assistant")
 

@@ -45,19 +45,19 @@ assistant._raw_handler ──► events.serialize_event ──► EventBuffer (d
 | Файл | Ответственность |
 | --- | --- |
 | `main.py` | точка входа, настройка логирования, запуск асинхронного цикла |
-| `src/config.py` | переменные окружения, пути, `MODEL_NAME`, `EVENT_BUFFER_TIMEOUT` |
-| `src/logger.py` | консольный цветной логгер и файлы `logs/` |
-| `src/model_info.py` | запрос `/models` у OpenRouter и определение input-модальностей модели |
-| `src/schema.py` | JSON-схема ответа модели (`{"actions": [...]}`) |
-| `src/commands.py` | whitelist high-level команд Telethon |
-| `src/dto.py` | сериализация Telegram DTO в JSON и обратная сборка TL-объектов |
-| `src/events.py` | обёртка сериализации входящего update |
-| `src/api_docs.py` | ленивый индекс Telegram API, `docsearch` и `docfetch` |
-| `src/executor.py` | выполнение действий, `action_result`, обработка ошибок, вложения медиа |
-| `src/buffer.py` | debounce-буфер событий: копит обновления и отдаёт пачкой |
-| `src/context.py` | история сообщений и её персистентность в `context.json` |
-| `src/assistant.py` | агентный цикл, сквозные id действий, хронологический сброс очереди |
-| `src/exceptions.py` | иерархия ошибок выполнения действий |
+| `src/core/config.py` | переменные окружения, пути, `MODEL_NAME`, `EVENT_BUFFER_TIMEOUT` |
+| `src/core/logger.py` | консольный цветной логгер и файлы `logs/` |
+| `src/core/exceptions.py` | иерархия ошибок выполнения действий |
+| `src/agent/assistant.py` | агентный цикл, сквозные id действий, хронологический сброс очереди |
+| `src/agent/context.py` | история сообщений и её персистентность в `context.json` |
+| `src/agent/buffer.py` | debounce-буфер событий: копит обновления и отдаёт пачкой |
+| `src/telegram/dto.py` | сериализация Telegram DTO в JSON и обратная сборка TL-объектов |
+| `src/telegram/events.py` | обёртка сериализации входящего update |
+| `src/telegram/executor.py` | выполнение действий, `action_result`, обработка ошибок, вложения медиа |
+| `src/telegram/api_docs.py` | ленивый индекс Telegram API, `docsearch` и `docfetch` |
+| `src/telegram/commands.py` | whitelist high-level команд Telethon |
+| `src/llm/schema.py` | JSON-схема ответа модели (`{"actions": [...]}`) |
+| `src/llm/model_info.py` | запрос `/models` у OpenRouter и определение input-модальностей модели |
 
 ## Состояние на диске
 

@@ -10,8 +10,8 @@ from typing import Any, Dict, List
 import telethon.tl.types as tl_types
 from telethon.tl.tlobject import TLObject
 
-from src.exceptions import ArgumentError, MethodNotFoundError
-from src.logger import get_logger
+from src.core.exceptions import ArgumentError, MethodNotFoundError
+from src.core.logger import get_logger
 
 logger = get_logger("dto")
 

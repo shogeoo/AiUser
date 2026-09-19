@@ -43,7 +43,7 @@
 {"id": "...", "type": "send_message", "data": {"entity": 100000001, "message": "привет"}}
 ```
 
-Доступные команды (`src/commands.py`):
+Доступные команды (`src/telegram/commands.py`):
 
 | Команда | Поля `data` |
 | --- | --- |

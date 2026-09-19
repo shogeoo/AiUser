@@ -2,8 +2,8 @@
 
 import pytest
 
-from src.api_docs import describe_api, search_api
-from src.exceptions import MethodNotFoundError
+from src.core.exceptions import MethodNotFoundError
+from src.telegram.api_docs import describe_api, search_api
 
 
 def test_describe_create_chat_marks_entity_like_and_builds_partial_template():

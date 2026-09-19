@@ -4,8 +4,8 @@ import json
 
 import pytest
 
-import src.context as context_module
-from src.context import ContextManager
+import src.agent.context as context_module
+from src.agent.context import ContextManager
 
 
 @pytest.fixture

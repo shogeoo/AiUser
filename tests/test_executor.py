@@ -8,8 +8,8 @@ import telethon.utils as tu
 from telethon.errors import FloodWaitError
 from telethon.tl.types import InputPeerChat
 
-from src.exceptions import ExecutionError
-from src.executor import ActionExecutor
+from src.core.exceptions import ExecutionError
+from src.telegram.executor import ActionExecutor
 
 
 class FakeClient:

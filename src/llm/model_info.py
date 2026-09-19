@@ -2,8 +2,8 @@
 
 import httpx
 
-from src.config import OPENROUTER_BASE_URL
-from src.logger import get_logger
+from src.core.config import OPENROUTER_BASE_URL
+from src.core.logger import get_logger
 
 logger = get_logger("model_info")
 

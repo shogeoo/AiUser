@@ -3,8 +3,8 @@
 import asyncio
 from typing import Any, Awaitable, Callable, Dict, List, Optional, Tuple
 
-from src.config import EVENT_BUFFER_TIMEOUT
-from src.logger import get_logger
+from src.core.config import EVENT_BUFFER_TIMEOUT
+from src.core.logger import get_logger
 
 logger = get_logger("buffer")
 

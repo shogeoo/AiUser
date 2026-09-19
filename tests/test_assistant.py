@@ -3,8 +3,8 @@
 import asyncio
 import json
 
-from src.assistant import TelegramAIAssistant
-from src.buffer import EventBuffer
+from src.agent.assistant import TelegramAIAssistant
+from src.agent.buffer import EventBuffer
 
 
 class FakeContext:

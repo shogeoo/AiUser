@@ -93,7 +93,7 @@ python main.py
 | `TG_API_HASH` | `api_hash` приложения Telegram |
 | `OPENROUTER_API_KEY` | ключ OpenRouter |
 
-Настройки в `src/config.py`:
+Настройки в `src/core/config.py`:
 
 | Константа | Назначение |
 | --- | --- |
@@ -115,19 +115,23 @@ person_prompt.txt      # слой персоны
 requirements.txt       # runtime-зависимости
 pyproject.toml         # метаданные, dev-зависимости, конфиги ruff и pytest
 src/
-  assistant.py         # цикл агента, буфер, контекст, сквозные id
-  executor.py          # выполнение actions, action_result, медиа
-  dto.py               # сериализация/десериализация Telegram DTO
-  api_docs.py          # docsearch / docfetch по Telegram API
-  schema.py            # JSON-схема ответа модели
-  commands.py           # whitelist high-level команд
-  events.py            # сериализация событий
-  context.py           # история диалога и context.json
-  buffer.py            # debounce-буфер событий
-  model_info.py        # определение input-модальностей модели
-  config.py            # настройки и пути
-  logger.py            # консольные и файловые логи
-  exceptions.py        # ошибки выполнения
+  core/                # инфраструктура
+    config.py          # настройки и пути
+    logger.py          # консольные и файловые логи
+    exceptions.py      # ошибки выполнения
+  agent/               # рантайм агента
+    assistant.py       # цикл агента, сквозные id, хронология
+    context.py         # история диалога и context.json
+    buffer.py          # debounce-буфер событий
+  telegram/            # слой Telegram
+    dto.py             # сериализация/десериализация Telegram DTO
+    executor.py        # выполнение actions, action_result, медиа
+    events.py          # сериализация событий
+    api_docs.py        # docsearch / docfetch по Telegram API
+    commands.py        # whitelist high-level команд
+  llm/                 # слой модели
+    schema.py          # JSON-схема ответа модели
+    model_info.py      # определение input-модальностей модели
 docs/
   ARCHITECTURE.md      # устройство и поток данных
   PROTOCOL.md          # JSON-протокол агента

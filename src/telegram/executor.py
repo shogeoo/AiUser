@@ -9,9 +9,11 @@ from typing import Any, Callable, Dict, List, Optional, Tuple
 from telethon import TelegramClient
 from telethon.errors import RPCError
 
-from src.api_docs import describe_api, search_api
-from src.commands import HIGH_LEVEL_COMMANDS
-from src.dto import (
+from src.core.exceptions import ActionError, ArgumentError, ExecutionError, MethodNotFoundError
+from src.core.logger import get_logger
+from src.telegram.api_docs import describe_api, search_api
+from src.telegram.commands import HIGH_LEVEL_COMMANDS
+from src.telegram.dto import (
     coerce_arguments,
     format_callable_signature,
     format_signature,
@@ -20,8 +22,6 @@ from src.dto import (
     resolve_dto_class,
     to_json,
 )
-from src.exceptions import ActionError, ArgumentError, ExecutionError, MethodNotFoundError
-from src.logger import get_logger
 
 logger = get_logger("executor")
 

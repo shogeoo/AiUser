@@ -4,8 +4,8 @@ import datetime
 
 import pytest
 
-from src.dto import coerce_arguments, from_json, resolve_dto_class, to_json, type_path
-from src.exceptions import ArgumentError, MethodNotFoundError
+from src.core.exceptions import ArgumentError, MethodNotFoundError
+from src.telegram.dto import coerce_arguments, from_json, resolve_dto_class, to_json, type_path
 
 
 def test_user_serialization_keeps_all_public_fields(sample_user):

@@ -1,6 +1,6 @@
 """Tests for the model response JSON schema."""
 
-from src.schema import AGENT_RESPONSE_SCHEMA
+from src.llm.schema import AGENT_RESPONSE_SCHEMA
 
 
 def test_schema_enforces_action_envelope():

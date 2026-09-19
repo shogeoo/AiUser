@@ -11,9 +11,9 @@ import telethon.tl.functions as functions_module
 import telethon.tl.types as types_module
 from telethon.tl.tlobject import TLObject
 
-from src.dto import format_annotation, type_path
-from src.exceptions import MethodNotFoundError
-from src.logger import get_logger
+from src.core.exceptions import MethodNotFoundError
+from src.core.logger import get_logger
+from src.telegram.dto import format_annotation, type_path
 
 logger = get_logger("api_docs")
 

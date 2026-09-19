@@ -2,8 +2,8 @@
 
 import asyncio
 
-from src.assistant import TelegramAIAssistant
-from src.logger import configure_logging, get_logger
+from src.agent.assistant import TelegramAIAssistant
+from src.core.logger import configure_logging, get_logger
 
 # It's better to configure logging at the very beginning
 configure_logging()

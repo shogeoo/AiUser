@@ -3,8 +3,8 @@
 import json
 from typing import Any, Dict, List, Optional
 
-from src.config import CONTEXT_FILE_PATH
-from src.logger import get_logger
+from src.core.config import CONTEXT_FILE_PATH
+from src.core.logger import get_logger
 
 logger = get_logger("context")
 

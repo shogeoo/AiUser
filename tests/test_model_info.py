@@ -2,7 +2,7 @@
 
 import httpx
 
-import src.model_info as model_info
+import src.llm.model_info as model_info
 
 
 class FakeResponse:

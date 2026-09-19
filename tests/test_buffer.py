@@ -4,8 +4,8 @@ import asyncio
 
 import pytest
 
-import src.buffer as buffer_module
-from src.buffer import EventBuffer
+import src.agent.buffer as buffer_module
+from src.agent.buffer import EventBuffer
 
 
 @pytest.fixture(autouse=True)

@@ -2,7 +2,7 @@
 
 from typing import Any, Dict
 
-from src.dto import to_json
+from src.telegram.dto import to_json
 
 
 def serialize_event(event: Any) -> Dict[str, Any]:

@@ -2,7 +2,7 @@
 
 from telethon.tl.types import PeerUser, UpdateReadHistoryInbox
 
-from src.events import serialize_event
+from src.telegram.events import serialize_event
 
 
 def test_update_is_serialized_into_envelope():
