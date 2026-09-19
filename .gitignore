@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment
+.env
+
+# IDE settings
+.idea/
+.vscode/
+.venv/
+
+# AiUser specific
+downloads/
+logs/
+
+*.session
+*.session-journal
+
+/context.json
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/

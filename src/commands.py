@@ -1,0 +1,28 @@
+"""Whitelist of high-level Telethon client methods exposed to the model."""
+
+HIGH_LEVEL_COMMANDS = {
+    "send_message",
+    "edit_message",
+    "delete_messages",
+    "forward_messages",
+    "get_messages",
+    "pin_message",
+    "unpin_message",
+    "send_read_acknowledge",
+    "send_file",
+    "download_media",
+    "download_profile_photo",
+    "get_dialogs",
+    "delete_dialog",
+    "get_me",
+    "get_entity",
+    "get_input_entity",
+    "get_participants",
+    "kick_participant",
+    "get_admin_log",
+    "get_profile_photos",
+    "edit_admin",
+    "edit_permissions",
+    "get_permissions",
+    "action",
+}
